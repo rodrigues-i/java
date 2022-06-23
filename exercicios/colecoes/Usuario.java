@@ -1,5 +1,7 @@
 package colecoes;
 
+
+// no arquivo Par do pacote generics também há uma implementação de override do equals e hashCode
 public class Usuario {
 
 	String nome;
