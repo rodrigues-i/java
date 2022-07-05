@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0">
+ 
+    <persistence-unit name="exercicios-jpa">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+        <mapping-file>META-INF/consultas.xml</mapping-file>
+        
+        <class>me.modelo.basico.Usuario</class>
+        <class>me.modelo.basico.Produto</class>
+        <class>me.modelo.umpraum.Assento</class>
+        <class>me.modelo.umpraum.Cliente</class>
+        <class>me.modelo.umpramuitos.Pedido</class>
+        <class>me.modelo.umpramuitos.ItemPedido</class>
+        <class>me.modelo.muitospramuitos.Tio</class>
+        <class>me.modelo.muitospramuitos.Sobrinho</class>
+        <class>me.modelo.muitospramuitos.Ator</class>
+        <class>me.modelo.muitospramuitos.Filme</class>
+		<class>me.modelo.composicao.Endereco</class>
+		<class>me.modelo.composicao.Funcionario</class>
+		<class>me.modelo.composicao.Fornecedor</class>
+		<class>me.modelo.heranca.Aluno</class>
+		<class>me.modelo.heranca.AlunoBolsista</class>
+        
+        <properties>
+            
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/curso_java" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="mypass" />
+
+            <property name="hibernate.archive.autodetection" value="class" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            
+        </properties>
+    </persistence-unit>
+</persistence>
